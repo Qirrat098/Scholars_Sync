@@ -223,7 +223,7 @@ class _TeacherProfileState extends State<TeacherProfile> {
                         ),
                         Spacer(),
                         Text(
-                          '${userController.userModel.value.id}',
+                          '${userController.userModel.value}',
                           style: GoogleFonts.nunito(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,

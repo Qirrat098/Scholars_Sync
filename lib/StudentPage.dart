@@ -12,11 +12,11 @@ class StudentForm extends StatefulWidget {
   _StudentFormState createState() => _StudentFormState();
 }
 
-void login(String email, String password, BuildContext context) async {
+/*void login(String email, String password, BuildContext context) async {
   var client = http.Client();
   try {
     var response = await client.post(
-      Uri.parse('https://scholar-sync-be-r58o.vercel.app/api/auth/login'),
+      Uri.parse('https://reqres.in/api/login'),
       body: {
         'email': email,
         'password': password,
@@ -54,7 +54,7 @@ void login(String email, String password, BuildContext context) async {
       ),
     );
   }
-}
+}*/
 
 class _StudentFormState extends State<StudentForm> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -237,11 +237,14 @@ class _StudentFormState extends State<StudentForm> {
                         });
                       },
                       onTap: () {
+                        Get.to(() => StudentDashboard());
+                      },
+                      /*onTap: () {
                         // Perform form validation before login
                         if (_formKey.currentState!.validate()) {
                           login(emailController.text.toString(), passwordController.text.toString(), context);
                         }
-                      },
+                      },*/
                       child: AnimatedContainer(
                         padding: EdgeInsets.only(bottom: _padding),
                         decoration: BoxDecoration(

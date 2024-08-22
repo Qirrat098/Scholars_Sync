@@ -6,8 +6,8 @@ class UserModel {
   String? profilePicture;
   String? school;
   String? role;
-  String? id;
   String? rollNumber;
+  String? id;
   String? subjectName;
   List<String>? subjects;
 
@@ -18,12 +18,13 @@ class UserModel {
     this.classNo,
     this.profilePicture,
     this.school,
-    this.id,
     this.role,
+    this.id,
     this.rollNumber,
-    this.subjectName,
     this.subjects,
   });
+
+
 
   Map<String, dynamic> toJson() {
     return {
@@ -33,11 +34,29 @@ class UserModel {
       'class': classNo,
       'profilePicture': profilePicture,
       'selectedSchool': school,
-      'teacherID':id,
       'role': role,
       'rollNumber': rollNumber,
-      'subjectName':subjectName,
       'subjects': subjects,
     };
   }
+}
+class Teacher {
+  String name;
+  String email;
+  String password;
+  String profilePicture;
+  String teacherID;
+  String subject;
+  List<String> classes;
+
+  Teacher({
+    required this.name,
+    required this.email,
+    required this.password,
+    this.profilePicture = '',
+    this.teacherID = '',
+    this.subject = '',
+    this.classes = const [],
+  });
+
 }

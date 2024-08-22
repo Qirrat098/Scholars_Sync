@@ -22,6 +22,7 @@ import 'MathsFaculty.dart';
 import 'JustThereT.dart';
 import 'Leaderboard.dart';
 import 'MyProfile.dart';
+import 'Notifications.dart';
 import 'PicturePage.dart';
 import 'Rewards.dart';
 import 'ScienceFaculty.dart';
@@ -36,13 +37,22 @@ import 'TeacherProfile.dart';
 import 'TeacherProfilePic.dart';
 import 'home_page.dart';
 import 'splashscreen.dart';
+import 'package:flutter/services.dart';
+
 
 
 
 void main() {
   // Initialize GetX dependencies
-  Get.put(UserController()); // Immediate registration
-  runApp(MyApp());
+
+      Get.put(UserController()); // Immediate registration
+
+      SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent, // Make status bar transparent (or set a color)
+        statusBarIconBrightness: Brightness.dark, // Use dark icons on the status bar
+      ));
+          runApp(MyApp());
+
 }
 
 
@@ -51,9 +61,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: '',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       debugShowCheckedModeBanner: false,
       initialRoute: '/splash',
       getPages: [
@@ -90,7 +97,16 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/EnglishFaculty',page: ()=> BiologyFaculty()),
         GetPage(name: '/EnglishFaculty',page: ()=> ScienceFaculty()),
         GetPage(name: '/EnglishFaculty',page: ()=> SocialStudiesFaculty()),
+        GetPage(name: '/Notification', page: ()=> Notifications()),
       ],
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarColor: Color(0xFF333452), // Transparent status bar
+            statusBarIconBrightness: Brightness.light, // Dark icons
+          ),
+        ),
+      ),
     );
   }
 }

@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -10,6 +12,7 @@ import 'BookSession.dart';
 import 'ChangePassword.dart';
 import 'ForgotPd.dart';
 import 'MyProfile.dart';
+import 'Notifications.dart';
 import 'Rewards.dart';
 import 'StudentPage.dart';
 import 'package:scholars_sync/user_controller.dart';
@@ -103,8 +106,7 @@ class _StudentDashboardState extends State<StudentDashboard> {
                   IconButton(
                     icon: Icon(Icons.notifications, color: Colors.black),
                     onPressed: () {
-                      // Add onPressed action for notification icon
-                    },
+                      Get.to(Notifications());                    },
                   ),
                 ],
               ),

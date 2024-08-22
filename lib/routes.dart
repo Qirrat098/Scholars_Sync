@@ -39,6 +39,7 @@ class MyRoutes {
   static String BiologyFaculty = "BiologyFaculty";
   static String ScienceFaculty = "ScienceFaculty" ;
   static String SocialStudiesFaculty = "SocialStudiesFaculty";
+  static String Notifications = "Notifications";
 
 
 }
