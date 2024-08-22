@@ -1,4 +1,4 @@
-# Scholar Sync
+# Scholars Sync
 
 ## Overview
 
