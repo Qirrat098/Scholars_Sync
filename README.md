@@ -1,5 +1,5 @@
 *Scholar Sync*
-Scholar Sync is a mobile educational application built using Flutter. The application facilitates seamless interaction between students and teachers by allowing students to arrange online meetings with their respective subject teachers. Both students and teachers can create accounts on the platform, and the app provides functionalities such as viewing the availability of teachers, maintaining student records, arranging quizzes, and rewarding students for their achievements.
+- Scholar Sync is a mobile educational application built using Flutter. The application facilitates seamless interaction between students and teachers by allowing students to arrange online meetings with their respective subject teachers. Both students and teachers can create accounts on the platform, and the app provides functionalities such as viewing the availability of teachers, maintaining student records, arranging quizzes, and rewarding students for their achievements.
 
 *Features*
 - User Accounts: Both students and teachers can create and manage their accounts.
